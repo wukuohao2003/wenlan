@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "文澜阁",
+    "slug": "WenLanPavilion",
+    "scheme": "wenlan",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/WenLanPavilion_icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/WenLanPavilion_init.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wukuohao.WenLanPavilion",
+      "buildNumber": "3"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/WenLanPavilion_icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "39514c21-9ab2-4416-9ce3-7cd6b07db695"
+      }
+    }
+  }
+}
