@@ -15,6 +15,8 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.wukuohao.WenLanPavilion",
+      "image": "exponent/ios-base",
+      "publishMethod": "apple",
       "buildNumber": "3"
     },
     "android": {
