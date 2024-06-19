@@ -25,20 +25,18 @@ function Home() {
 
   const getTypes = async () => {
     const data = await getTypesAPI();
-    if (data.code == 200) {
+    if (data.data.code == 200) {
       let newls = [...creationTypesList];
-      newls.push(...data.typesList);
+      newls.push(...data.data.typesList);
       setCreationTypesList(newls);
     }
   };
 
   const getCreations = async (typeName: string = "") => {
     setCreationList([]);
-    setLoading(true);
     const data = await getCreationAPI(typeName);
-    if (data.code == 200) {
-      setCreationList(data.creationList);
-      setLoading(false);
+    if (data.data.code == 200) {
+      setCreationList(data.data.creationList);
     }
   };
 

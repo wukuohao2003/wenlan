@@ -1,9 +1,14 @@
 import $request from "../tools/$request";
+import { $storage } from "../tools/$storage";
 
-export const getUserAPI = (_id: string) => {
+export const getUserAPI = async (_id: string) => {
+  const etag = await $storage.Gets("Etag");
   return $request({
     url: "getMessageList",
     method: "post",
+    headers: {
+      "if-none-match": etag || "",
+    },
     data: {
       _id,
     },

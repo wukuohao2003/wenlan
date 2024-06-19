@@ -5,7 +5,9 @@ export const $storage = {
     return AsyncStorage.getItem(gets);
   },
   Sets: (sets: string, datas: string) => {
-    return AsyncStorage.getItem(sets, datas);
+    return AsyncStorage.setItem(sets, datas);
   },
-  Clear: () => {},
+  Clear: () => {
+    return AsyncStorage.clear();
+  },
 };

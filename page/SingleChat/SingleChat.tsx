@@ -38,8 +38,8 @@ function SingleChat() {
       "666a6267c5850954c0391481",
       params.userID,
     );
-    if (data.code == 200) {
-      setMessageList(data.datas);
+    if (data.data.code == 200) {
+      setMessageList(data.data.datas);
       if (state) {
         setTimeout(() => {
           scrollToBottom();
@@ -132,7 +132,7 @@ function SingleChat() {
                     params.userID,
                     message,
                   );
-                  if (data.code == 200) {
+                  if (data.data.code == 200) {
                     socket.emit("sendMessage", params.userID);
                     setMessage("");
                     getMessageList();

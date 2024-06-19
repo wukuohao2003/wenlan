@@ -20,7 +20,7 @@ $request.interceptors.request.use(
 $request.interceptors.response.use(
   function (response: AxiosResponse) {
     // 对响应数据进行操作
-    return response.data;
+    return response;
   },
   function (error: AxiosError) {
     // 对响应错误进行操作
