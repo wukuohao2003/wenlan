@@ -4,7 +4,6 @@ import { AxiosError } from "axios";
 import { AxiosRequestHeaders } from "axios";
 
 const $request = axios.create({
-  // baseURL: "http://123.57.206.230:5000/api/v3/",
   baseURL: "https://wenlan-pavilion.top:5000/api/v3/",
 });
 

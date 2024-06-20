@@ -133,8 +133,8 @@ function SingleChat() {
                     message,
                   );
                   if (data.data.code == 200) {
-                    socket.emit("sendMessage", params.userID);
                     setMessage("");
+                    socket.emit("sendMessage", params.userID);
                     getMessageList();
                   }
                 }}

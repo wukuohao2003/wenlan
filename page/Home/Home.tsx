@@ -33,9 +33,11 @@ function Home() {
   };
 
   const getCreations = async (typeName: string = "") => {
+    setLoading(true);
     setCreationList([]);
     const data = await getCreationAPI(typeName);
     if (data.data.code == 200) {
+      setLoading(false);
       setCreationList(data.data.creationList);
     }
   };

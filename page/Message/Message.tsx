@@ -5,7 +5,6 @@ import {
   ScrollView,
   Image,
   Pressable,
-  AppState,
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./Style";
@@ -37,10 +36,12 @@ function Message() {
           );
         }
       })
-      .catch(async (err: any) => {
+      .catch(async (err) => {
         if (err.response.status == 304) {
           const ls: any = await $storage.Gets("messageList");
           setMessageList(JSON.parse(ls));
+          return;
+        } else {
           return;
         }
       });
@@ -62,14 +63,7 @@ function Message() {
       setState(!state);
     }, 2000);
 
-    const handleAppStateChange = (nextAppState: any) => {
-      if (nextAppState == "active") {
-        connect();
-      }
-    };
-
     getUser();
-    AppState.addEventListener("change", handleAppStateChange);
     return () => clearTimeout(timer);
   }, [state]);
 

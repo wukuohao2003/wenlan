@@ -38,6 +38,7 @@ export const styles = StyleSheet.create({
     marginLeft: 10,
   },
   singleChatBodyMessage: {
+    minWidth: "14%",
     maxWidth: "60%",
     minHeight: 48,
     borderRadius: 12,
